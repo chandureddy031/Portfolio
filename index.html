@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalava Chandrakanth Reddy | AI/ML Engineer Portfolio</title>
+    <meta name="description" content="Portfolio of Kalava Chandrakanth Reddy — AI/ML Engineer building intelligent systems from data to production.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Fira+Code:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-inner">
+            <div class="preloader-ring"></div>
+            <span class="preloader-text">Loading...</span>
+        </div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
+    <!-- Background Canvas -->
+    <canvas id="bgCanvas"></canvas>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <a href="#home" class="nav-logo">
+            <span class="logo-k">K</span><span class="logo-c">C</span><span class="logo-r">R</span>
+        </a>
+        <div class="nav-links" id="navLinks">
+            <a href="#home" class="nav-link active" data-section="home">Home</a>
+            <a href="#about" class="nav-link" data-section="about">About</a>
+            <a href="#education" class="nav-link" data-section="education">Education</a>
+            <a href="#projects" class="nav-link" data-section="projects">Projects</a>
+            <a href="#certifications" class="nav-link" data-section="certifications">Certs</a>
+            <a href="#skills" class="nav-link" data-section="skills">Skills</a>
+            <a href="#contact" class="nav-link" data-section="contact">Contact</a>
+        </div>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <!-- Mobile Nav Overlay -->
+    <div class="mobile-nav" id="mobileNav">
+        <div class="mobile-nav-inner">
+            <a href="#home" class="mobile-link">Home</a>
+            <a href="#about" class="mobile-link">About</a>
+            <a href="#education" class="mobile-link">Education</a>
+            <a href="#projects" class="mobile-link">Projects</a>
+            <a href="#certifications" class="mobile-link">Certifications</a>
+            <a href="#skills" class="mobile-link">Skills</a>
+            <a href="#contact" class="mobile-link">Contact</a>
+        </div>
+    </div>
+
+    <!-- =============== HERO =============== -->
+    <section class="hero" id="home">
+        <div class="hero-container">
+            <div class="hero-left">
+                <div class="hero-badge reveal">
+                    <span class="badge-pulse"></span>
+                    Open to Opportunities
+                </div>
+                <p class="hero-hi reveal">Hello, I'm</p>
+                <h1 class="hero-name reveal">
+                    <span class="name-first">Kalava</span>
+                    <span class="name-mid">Chandrakanth</span>
+                    <span class="name-last">Reddy</span>
+                </h1>
+                <div class="hero-role reveal">
+                    <span class="role-prefix">&gt;&nbsp;</span>
+                    <span id="typingText"></span>
+                    <span class="typing-cursor">|</span>
+                </div>
+                <p class="hero-desc reveal">I architect intelligent systems that transform raw data into production-grade decisions. From neural networks that predict disease risk to multi-agent pipelines that automate entire workflows — I build AI that works.</p>
+                <div class="hero-buttons reveal">
+                    <a href="#projects" class="btn btn-primary magnetic">
+                        <span>View My Work</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#contact" class="btn btn-ghost magnetic">
+                        <span>Let's Talk</span>
+                    </a>
+                </div>
+                <div class="hero-social reveal">
+                    <a href="https://github.com/chandureddy031" target="_blank" rel="noopener" class="social-link magnetic" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/kalava-chandrakanth-reddy-451232389" target="_blank" rel="noopener" class="social-link magnetic" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="mailto:kalavachandrakanthreddy@gmail.com" class="social-link magnetic" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    <a href="tel:7980534283" class="social-link magnetic" aria-label="Phone"><i class="fas fa-phone"></i></a>
+                </div>
+            </div>
+            <div class="hero-right reveal">
+                <div class="hero-image-wrapper">
+                    <div class="hero-image-glow"></div>
+                    <div class="hero-image-border"></div>
+                    <img src="images/chandu_img.jpg" alt="Kalava Chandrakanth Reddy" class="hero-image">
+                    <div class="hero-image-dots"></div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-down">
+            <div class="scroll-line"></div>
+            <span>Scroll</span>
+        </div>
+    </section>
+
+    <!-- =============== ABOUT =============== -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="section-head">
+                <span class="section-tag">01</span>
+                <h2 class="section-title reveal">About Me</h2>
+                <div class="section-bar"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-text-col">
+                    <p class="about-lead reveal">I'm a final-year engineering graduate with a deep passion for building intelligent systems that solve real-world problems. My work spans the full AI/ML spectrum — from training deep learning models and designing multi-agent architectures to deploying production-grade pipelines with complete MLOps automation.</p>
+                    <p class="about-lead reveal">What drives me is the belief that the best AI doesn't just process data — it understands context, makes decisions, and takes action. Every project I build is designed not just to work, but to scale, adapt, and deliver measurable impact.</p>
+                    <div class="about-highlights reveal">
+                        <div class="highlight-card">
+                            <div class="highlight-icon"><i class="fas fa-robot"></i></div>
+                            <div class="highlight-text">
+                                <strong>Agentic AI</strong>
+                                <span>Multi-agent pipelines & autonomous systems</span>
+                            </div>
+                        </div>
+                        <div class="highlight-card">
+                            <div class="highlight-icon"><i class="fas fa-brain"></i></div>
+                            <div class="highlight-text">
+                                <strong>Deep Learning</strong>
+                                <span>Neural networks & model architectures</span>
+                            </div>
+                        </div>
+                        <div class="highlight-card">
+                            <div class="highlight-icon"><i class="fas fa-cogs"></i></div>
+                            <div class="highlight-text">
+                                <strong>MLOps</strong>
+                                <span>DVC, MLflow, Docker & CI/CD</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-stats-col reveal">
+                    <div class="stat-box">
+                        <span class="stat-num" data-count="9">0</span>
+                        <span class="stat-lbl">Projects Built</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-num" data-count="15">0</span>
+                        <span class="stat-lbl">Technologies</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-num" data-count="6">0</span>
+                        <span class="stat-lbl">Certifications</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-num" data-count="8">0</span>
+                        <span class="stat-lbl">CGPA</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =============== EDUCATION =============== -->
+    <section class="section section-dark" id="education">
+        <div class="container">
+            <div class="section-head">
+                <span class="section-tag">02</span>
+                <h2 class="section-title reveal">Education</h2>
+                <div class="section-bar"></div>
+            </div>
+            <div class="edu-grid">
+                <div class="edu-card reveal">
+                    <div class="edu-header">
+                        <div class="edu-icon-wrap"><i class="fas fa-graduation-cap"></i></div>
+                        <div class="edu-meta">
+                            <span class="edu-year">2021 — 2025</span>
+                            <span class="edu-location"><i class="fas fa-map-marker-alt"></i> Bangalore, Karnataka</span>
+                        </div>
+                    </div>
+                    <h3 class="edu-title">CMR University</h3>
+                    <p class="edu-sub">B.Tech — Computer Science & Engineering</p>
+                    <div class="edu-score">
+                        <div class="score-ring" data-score="88">
+                            <svg viewBox="0 0 80 80"><circle cx="40" cy="40" r="35" class="score-bg"/><circle cx="40" cy="40" r="35" class="score-fill"/></svg>
+                            <span class="score-val">8.8</span>
+                        </div>
+                        <span class="score-label">CGPA</span>
+                    </div>
+                </div>
+                <div class="edu-card reveal">
+                    <div class="edu-header">
+                        <div class="edu-icon-wrap"><i class="fas fa-school"></i></div>
+                        <div class="edu-meta">
+                            <span class="edu-year">2019 — 2021</span>
+                            <span class="edu-location"><i class="fas fa-map-marker-alt"></i> Khaja Nagar, Anantapur</span>
+                        </div>
+                    </div>
+                    <h3 class="edu-title">Narayana Junior College</h3>
+                    <p class="edu-sub">Intermediate (MPC)</p>
+                    <div class="edu-score">
+                        <div class="score-ring" data-score="77">
+                            <svg viewBox="0 0 80 80"><circle cx="40" cy="40" r="35" class="score-bg"/><circle cx="40" cy="40" r="35" class="score-fill"/></svg>
+                            <span class="score-val">77%</span>
+                        </div>
+                        <span class="score-label">Score</span>
+                    </div>
+                </div>
+                <div class="edu-card reveal">
+                    <div class="edu-header">
+                        <div class="edu-icon-wrap"><i class="fas fa-book-reader"></i></div>
+                        <div class="edu-meta">
+                            <span class="edu-year">2018 — 2019</span>
+                            <span class="edu-location"><i class="fas fa-map-marker-alt"></i> Anantapur, AP</span>
+                        </div>
+                    </div>
+                    <h3 class="edu-title">Prasad Concept School</h3>
+                    <p class="edu-sub">Secondary School Certificate (10th)</p>
+                    <div class="edu-score">
+                        <div class="score-ring" data-score="94">
+                            <svg viewBox="0 0 80 80"><circle cx="40" cy="40" r="35" class="score-bg"/><circle cx="40" cy="40" r="35" class="score-fill"/></svg>
+                            <span class="score-val">94%</span>
+                        </div>
+                        <span class="score-label">Score</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =============== PROJECTS =============== -->
+    <section class="section" id="projects">
+        <div class="container">
+            <div class="section-head">
+                <span class="section-tag">03</span>
+                <h2 class="section-title reveal">Projects</h2>
+                <div class="section-bar"></div>
+            </div>
+
+            <!-- Agentic AI -->
+            <div class="project-group">
+                <h3 class="group-title reveal"><i class="fas fa-robot"></i> Agentic AI Systems</h3>
+                <div class="project-grid">
+                    <div class="project-card reveal" data-project="phoneiq">
+                        <div class="card-3d">
+                            <div class="card-img">
+                                <img src="images/UI-1.png" alt="PhoneIQ" loading="lazy">
+                                <div class="card-hover-overlay"><span>Click to Explore</span></div>
+                            </div>
+                            <div class="card-body">
+                                <h4>PhoneIQ</h4>
+                                <p>3-agent AI pipeline for smartphone deep-dive analysis and smart comparisons</p>
+                                <div class="card-techs">
+                                    <span class="tech-chip"><i class="devicon-python-plain"></i> FastAPI</span>
+                                    <span class="tech-chip"><i class="fas fa-robot"></i> Groq LLM</span>
+                                    <span class="tech-chip"><i class="devicon-docker-plain"></i> Docker</span>
+                                </div>
+                                <div class="card-links">
+                                    <a href="https://github.com/chandureddy031/AI-POWERED-PHONE-RESEARCH-AGENT.git" target="_blank" rel="noopener" class="clink"><i class="fab fa-github"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card reveal" data-project="trading">
+                        <div class="card-3d">
+                            <div class="card-img">
+                                <img src="images/s1.png" alt="AI Trading Agent" loading="lazy">
+                                <div class="card-hover-overlay"><span>Click to Explore</span></div>
+                            </div>
+                            <div class="card-body">
+                                <h4>AI Trading Agent</h4>
+                                <p>Intelligent stock analysis with multi-tool orchestration for real-time research</p>
+                                <div class="card-techs">
+                                    <span class="tech-chip"><i class="devicon-python-plain"></i> Python</span>
+                                    <span class="tech-chip"><i class="fas fa-chart-line"></i> Financial APIs</span>
+                                    <span class="tech-chip"><i class="fas fa-robot"></i> AI Agents</span>
+                                </div>
+                                <div class="card-links">
+                                    <a href="https://github.com/chandureddy031/AI-POWERED-PHONE-RESEARCH-AGENT.git" target="_blank" rel="noopener" class="clink"><i class="fab fa-github"></i></a>
+                                    <a href="https://trading-agent-production-feab.up.railway.app" target="_blank" rel="noopener" class="clink"><i class="fas fa-external-link-alt"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card reveal" data-project="talentai">
+                        <div class="card-3d">
+                            <div class="card-img">
+                                <img src="images/c.png" alt="TalentAI" loading="lazy">
+                                <div class="card-hover-overlay"><span>Click to Explore</span></div>
+                            </div>
+                            <div class="card-body">
+                                <h4>TalentAI</h4>
+                                <p>7-stage recruitment pipeline — parse, match, score, detect bias, decide & email</p>
+                                <div class="card-techs">
+                                    <span class="tech-chip"><i class="devicon-flask-original"></i> Flask</span>
+                                    <span class="tech-chip"><i class="fas fa-file-pdf"></i> PyPDF2</span>
+                                    <span class="tech-chip"><i class="fas fa-envelope"></i> SMTP</span>
+                                </div>
+                                <div class="card-links">
+                                    <a href="https://github.com/chandureddy031/Resume_screening_pro.git" target="_blank" rel="noopener" class="clink"><i class="fab fa-github"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card reveal" data-project="kitchen">
+                        <div class="card-3d">
+                            <div class="card-img">
+                                <div class="card-placeholder ph4"><i class="fas fa-utensils"></i><span>Smart Kitchen AI</span></div>
+                                <div class="card-hover-overlay"><span>Click to Explore</span></div>
+                            </div>
+                            <div class="card-body">
+                                <h4>Smart Kitchen AI</h4>
+                                <p>AI kitchen agent that analyzes groceries, plans meals & guides cooking step-by-step with timers</p>
+                                <div class="card-techs">
+                                    <span class="tech-chip"><i class="devicon-python-plain"></i> FastAPI</span>
+                                    <span class="tech-chip"><i class="fas fa-project-diagram"></i> LangGraph</span>
+                                    <span class="tech-chip"><i class="fas fa-robot"></i> Groq Llama</span>
+                                </div>
+                                <div class="card-links">
+                                    <a href="https://github.com/chandureddy031/KITCHEN-AGENT.git" target="_blank" rel="noopener" class="clink"><i class="fab fa-github"></i></a>
+                                    <a href="https://www.linkedin.com/posts/kalava-chandrakanth-reddy-451232389_ai-langgraph-fastapi-ugcPost-7457045576585760768-UVex" target="_blank" rel="noopener" class="clink"><i class="fab fa-linkedin"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ML / DL -->
+            <div class="project-group">
+                <h3 class="group-title reveal"><i class="fas fa-brain"></i> Machine Learning & Deep Learning</h3>
+                <div class="project-grid">
+                    <div class="project-card reveal" data-project="churn">
+                        <div class="card-3d">
+                            <div class="card-img">
+                                <div class="card-placeholder ph1"><i class="fas fa-chart-line"></i><span>Churn Prediction</span></div>
+                                <div class="card-hover-overlay"><span>Click to Explore</span></div>
+                            </div>
+                            <div class="card-body">
+                                <h4>Customer Churn Prediction</h4>
+                                <p>Production ML pipeline with DVC automation, MLflow tracking & Streamlit dashboard</p>
+                                <div class="card-techs">
+                                    <span class="tech-chip"><i class="devicon-scikit-learn-plain"></i> Scikit-learn</span>
+                                    <span class="tech-chip"><i class="fas fa-code-branch"></i> DVC</span>
+                                    <span class="tech-chip"><i class="devicon-streamlit-plain"></i> Streamlit</span>
+                                </div>
+                                <div class="card-links">
+                                    <a href="https://github.com/chandureddy031/Customer_Churn_MlPipeline_Dvc_Mlflow.git" target="_blank" rel="noopener" class="clink"><i class="fab fa-github"></i></a>
+                                    <a href="https://customerchurnmlpipelinedvcmlflow-jqzis8eacgadsmsmczq4bm.streamlit.app/" target="_blank" rel="noopener" class="clink"><i class="fas fa-external-link-alt"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card reveal" data-project="diabetes">
+                        <div class="card-3d">
+                            <div class="card-img">
+                                <div class="card-placeholder ph2"><i class="fas fa-heartbeat"></i><span>Diabetes Prediction</span></div>
+                                <div class="card-hover-overlay"><span>Click to Explore</span></div>
+                            </div>
+                            <div class="card-body">
+                                <h4>Diabetes Prediction</h4>
+                                <p>Neural network model with interactive Streamlit dashboard for risk assessment</p>
+                                <div class="card-techs">
+                                    <span class="tech-chip"><i class="devicon-tensorflow-original"></i> TensorFlow</span>
+                                    <span class="tech-chip"><i class="devicon-python-plain"></i> Keras</span>
+                                    <span class="tech-chip"><i class="devicon-streamlit-plain"></i> Streamlit</span>
+                                </div>
+                                <div class="card-links">
+                                    <a href="https://github.com/chandureddy031/Diabetes_Related_Ml_Ai_Agent.git" target="_blank" rel="noopener" class="clink"><i class="fab fa-github"></i></a>
+                                    <a href="https://diabetes-project-one.streamlit.app/" target="_blank" rel="noopener" class="clink"><i class="fas fa-external-link-alt"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card reveal" data-project="movie">
+                        <div class="card-3d">
+                            <div class="card-img">
+                                <div class="card-placeholder ph3"><i class="fas fa-film"></i><span>Movie Recommendations</span></div>
+                                <div class="card-hover-overlay"><span>Click to Explore</span></div>
+                            </div>
+                            <div class="card-body">
+                                <h4>Movie Recommendation</h4>
+                                <p>Content-based filtering with TMDb API for personalized movie suggestions</p>
+                                <div class="card-techs">
+                                    <span class="tech-chip"><i class="devicon-pandas-plain"></i> Pandas</span>
+                                    <span class="tech-chip"><i class="devicon-scikit-learn-plain"></i> Scikit-learn</span>
+                                    <span class="tech-chip"><i class="devicon-streamlit-plain"></i> Streamlit</span>
+                                </div>
+                                <div class="card-links">
+                                    <a href="https://github.com/chandureddy031/Movie_Recommendation_System.git" target="_blank" rel="noopener" class="clink"><i class="fab fa-github"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- System Design & Developer Tools -->
+            <div class="project-group">
+                <h3 class="group-title reveal"><i class="fas fa-server"></i> System Design & Developer Tools</h3>
+                <div class="project-grid">
+                    <div class="project-card reveal" data-project="loki">
+                        <div class="card-3d">
+                            <div class="card-img">
+                                <div class="card-placeholder ph5"><i class="fas fa-terminal"></i><span>Loki CLI</span></div>
+                                <div class="card-hover-overlay"><span>Click to Explore</span></div>
+                            </div>
+                            <div class="card-body">
+                                <h4>Loki CLI</h4>
+                                <p>AI-powered code analysis CLI — scan codebases, detect errors, RAG chat, auto-fix across 18+ languages</p>
+                                <div class="card-techs">
+                                    <span class="tech-chip"><i class="devicon-python-plain"></i> Click CLI</span>
+                                    <span class="tech-chip"><i class="fas fa-search"></i> FAISS RAG</span>
+                                    <span class="tech-chip"><i class="fas fa-shield-alt"></i> 5-Layer Security</span>
+                                </div>
+                                <div class="card-links">
+                                    <a href="https://pypi.org/project/LOKK/" target="_blank" rel="noopener" class="clink"><i class="fas fa-cube"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card reveal" data-project="postgres">
+                        <div class="card-3d">
+                            <div class="card-img">
+                                <div class="card-placeholder ph6"><i class="fas fa-database"></i><span>Event Sourcing Inventory</span></div>
+                                <div class="card-hover-overlay"><span>Click to Explore</span></div>
+                            </div>
+                            <div class="card-body">
+                                <h4>Event Sourcing Inventory</h4>
+                                <p>Full Event Sourcing + CQRS on PostgreSQL with transactional outbox, RAG AI & Kafka integration</p>
+                                <div class="card-techs">
+                                    <span class="tech-chip"><i class="devicon-postgresql-plain"></i> PostgreSQL</span>
+                                    <span class="tech-chip"><i class="devicon-fastapi-plain"></i> FastAPI</span>
+                                    <span class="tech-chip"><i class="fas fa-stream"></i> Kafka</span>
+                                </div>
+                                <div class="card-links"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =============== CERTIFICATIONS =============== -->
+    <section class="section section-dark" id="certifications">
+        <div class="container">
+            <div class="section-head">
+                <span class="section-tag">04</span>
+                <h2 class="section-title reveal">Certifications</h2>
+                <div class="section-bar"></div>
+            </div>
+            <p class="cert-subtitle reveal">Click any certificate to view details</p>
+            <div class="cert-grid">
+                <div class="cert-card reveal" data-cert="sql">
+                    <div class="cert-img-wrap"><img src="images/SQL.png" alt="SQL Certificate" loading="lazy"></div>
+                    <div class="cert-info">
+                        <div class="cert-icon"><i class="fas fa-database"></i></div>
+                        <h4>SQL</h4>
+                        <p>Euron</p>
+                    </div>
+                </div>
+                <div class="cert-card reveal" data-cert="python">
+                    <div class="cert-img-wrap"><img src="images/PYTHON.png" alt="Python Certificate" loading="lazy"></div>
+                    <div class="cert-info">
+                        <div class="cert-icon"><i class="devicon-python-plain"></i></div>
+                        <h4>Python</h4>
+                        <p>Euron</p>
+                    </div>
+                </div>
+                <div class="cert-card reveal" data-cert="java">
+                    <div class="cert-img-wrap"><img src="images/JAVA.png" alt="Java Certificate" loading="lazy"></div>
+                    <div class="cert-info">
+                        <div class="cert-icon"><i class="devicon-java-plain"></i></div>
+                        <h4>Java</h4>
+                        <p>Euron</p>
+                    </div>
+                </div>
+                <div class="cert-card reveal" data-cert="genai">
+                    <div class="cert-img-wrap"><img src="images/GENAI.png" alt="Generative AI Certificate" loading="lazy"></div>
+                    <div class="cert-info">
+                        <div class="cert-icon"><i class="fas fa-robot"></i></div>
+                        <h4>Generative AI</h4>
+                        <p>Euron</p>
+                    </div>
+                </div>
+                <div class="cert-card reveal" data-cert="fsds">
+                    <div class="cert-img-wrap"><img src="images/FSDS.png" alt="Full Stack Data Science" loading="lazy"></div>
+                    <div class="cert-info">
+                        <div class="cert-icon"><i class="fas fa-chart-bar"></i></div>
+                        <h4>Full Stack Data Science</h4>
+                        <p>Euron</p>
+                    </div>
+                </div>
+                <div class="cert-card reveal" data-cert="oracle">
+                    <div class="cert-img-wrap"><img src="images/ORACLE.jpeg" alt="Oracle GenAI" loading="lazy"></div>
+                    <div class="cert-info">
+                        <div class="cert-icon"><i class="fas fa-cloud"></i></div>
+                        <h4>Oracle Generative AI</h4>
+                        <p>Oracle</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =============== SKILLS =============== -->
+    <section class="section" id="skills">
+        <div class="container">
+            <div class="section-head">
+                <span class="section-tag">05</span>
+                <h2 class="section-title reveal">Skills & Tools</h2>
+                <div class="section-bar"></div>
+            </div>
+            <div class="skills-container">
+                <div class="skill-group reveal">
+                    <h3 class="skill-group-title"><i class="fas fa-brain"></i> AI & Machine Learning</h3>
+                    <div class="skill-cards">
+                        <div class="skill-card"><div class="skill-icon"><i class="devicon-python-plain"></i></div><span>Python</span></div>
+                        <div class="skill-card"><div class="skill-icon"><i class="devicon-tensorflow-original"></i></div><span>TensorFlow</span></div>
+                        <div class="skill-card"><div class="skill-icon"><i class="devicon-keras-plain"></i></div><span>Keras</span></div>
+                        <div class="skill-card"><div class="skill-icon"><i class="devicon-scikit-learn-plain"></i></div><span>Scikit-learn</span></div>
+                        <div class="skill-card"><div class="skill-icon"><i class="fas fa-robot"></i></div><span>LangChain</span></div>
+                        <div class="skill-card"><div class="skill-icon"><i class="fas fa-project-diagram"></i></div><span>LangGraph</span></div>
+                        <div class="skill-card"><div class="skill-icon"><i class="fas fa-network-wired"></i></div><span>NLP</span></div>
+                    </div>
+                </div>
+                <div class="skill-group reveal">
+                    <h3 class="skill-group-title"><i class="fas fa-code"></i> Frameworks & Tools</h3>
+                    <div class="skill-cards">
+                        <div class="skill-card"><div class="skill-icon"><i class="devicon-fastapi-plain"></i></div><span>FastAPI</span></div>
+                        <div class="skill-card"><div class="skill-icon"><i class="devicon-flask-original"></i></div><span>Flask</span></div>
+                        <div class="skill-card"><div class="skill-icon"><i class="devicon-streamlit-plain"></i></div><span>Streamlit</span></div>
+                        <div class="skill-card"><div class="skill-icon"><i class="devicon-docker-plain"></i></div><span>Docker</span></div>
+                        <div class="skill-card"><div class="skill-icon"><i class="devicon-git-plain"></i></div><span>Git</span></div>
+                        <div class="skill-card"><div class="skill-icon"><i class="devicon-github-original"></i></div><span>GitHub</span></div>
+                        <div class="skill-card"><div class="skill-icon"><i class="fas fa-code-branch"></i></div><span>DVC</span></div>
+                        <div class="skill-card"><div class="skill-icon"><i class="fas fa-chart-area"></i></div><span>MLflow</span></div>
+                    </div>
+                </div>
+                <div class="skill-group reveal">
+                    <h3 class="skill-group-title"><i class="fas fa-database"></i> Data & Languages</h3>
+                    <div class="skill-cards">
+                        <div class="skill-card"><div class="skill-icon"><i class="devicon-pandas-plain"></i></div><span>Pandas</span></div>
+                        <div class="skill-card"><div class="skill-icon"><i class="devicon-numpy-original"></i></div><span>NumPy</span></div>
+                        <div class="skill-card"><div class="skill-icon"><i class="devicon-mysql-plain"></i></div><span>SQL</span></div>
+                        <div class="skill-card"><div class="skill-icon"><i class="devicon-java-plain"></i></div><span>Java</span></div>
+                        <div class="skill-card"><div class="skill-icon"><i class="devicon-javascript-plain"></i></div><span>JavaScript</span></div>
+                        <div class="skill-card"><div class="skill-icon"><i class="devicon-matplotlib-plain"></i></div><span>Matplotlib</span></div>
+                        <div class="skill-card"><div class="skill-icon"><i class="devicon-html5-plain"></i></div><span>HTML/CSS</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =============== CONTACT =============== -->
+    <section class="section section-dark" id="contact">
+        <div class="container">
+            <div class="section-head">
+                <span class="section-tag">06</span>
+                <h2 class="section-title reveal">Get In Touch</h2>
+                <div class="section-bar"></div>
+            </div>
+            <p class="contact-tagline reveal">Let's build something extraordinary together. I'm actively looking for opportunities in AI/ML engineering, data science, and intelligent systems.</p>
+            <div class="contact-cards-center">
+                <a href="mailto:kalavachandrakanthreddy@gmail.com" class="contact-card reveal">
+                    <div class="cc-icon"><i class="fas fa-envelope"></i></div>
+                    <div class="cc-body">
+                        <span class="cc-label">Email</span>
+                        <span class="cc-value">kalavachandrakanthreddy@gmail.com</span>
+                    </div>
+                </a>
+                <a href="tel:7980534283" class="contact-card reveal">
+                    <div class="cc-icon"><i class="fas fa-phone"></i></div>
+                    <div class="cc-body">
+                        <span class="cc-label">Phone</span>
+                        <span class="cc-value">+91 7980534283</span>
+                    </div>
+                </a>
+                <a href="https://linkedin.com/in/kalava-chandrakanth-reddy-451232389" target="_blank" rel="noopener" class="contact-card reveal">
+                    <div class="cc-icon"><i class="fab fa-linkedin-in"></i></div>
+                    <div class="cc-body">
+                        <span class="cc-label">LinkedIn</span>
+                        <span class="cc-value">Kalava Chandrakanth Reddy</span>
+                    </div>
+                </a>
+                <a href="https://github.com/chandureddy031" target="_blank" rel="noopener" class="contact-card reveal">
+                    <div class="cc-icon"><i class="fab fa-github"></i></div>
+                    <div class="cc-body">
+                        <span class="cc-label">GitHub</span>
+                        <span class="cc-value">chandureddy031</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- =============== FOOTER =============== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-row">
+                <p>Built by <strong>Kalava Chandrakanth Reddy</strong></p>
+                <div class="footer-socials">
+                    <a href="https://github.com/chandureddy031" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/kalava-chandrakanth-reddy-451232389" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="mailto:kalavachandrakanthreddy@gmail.com"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- =============== PROJECT MODAL =============== -->
+    <div class="modal-overlay" id="projectModal">
+        <div class="modal-bg" id="modalBg"></div>
+        <div class="modal-box">
+            <button class="modal-x" id="modalX"><i class="fas fa-times"></i></button>
+            <div class="modal-img-area">
+                <img src="" alt="" id="modalImg">
+                <div class="modal-img-fade"></div>
+            </div>
+            <div class="modal-content">
+                <h2 id="modalTitle"></h2>
+                <p id="modalDesc"></p>
+                <div id="modalTechs" class="modal-techs"></div>
+                <div id="modalLinks" class="modal-links"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- =============== CERTIFICATE MODAL =============== -->
+    <div class="modal-overlay" id="certModal">
+        <div class="modal-bg" id="certBg"></div>
+        <div class="cert-modal-box">
+            <button class="modal-x" id="certX"><i class="fas fa-times"></i></button>
+            <div class="cert-modal-img">
+                <img src="" alt="" id="certModalImg">
+            </div>
+            <div class="cert-modal-body">
+                <div class="cert-modal-icon" id="certModalIcon"></div>
+                <h2 id="certModalTitle"></h2>
+                <p class="cert-modal-issuer" id="certModalIssuer"></p>
+                <p class="cert-modal-desc" id="certModalDesc"></p>
+                <div class="cert-modal-skills" id="certModalSkills"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
